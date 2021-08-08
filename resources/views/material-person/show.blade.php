@@ -20,6 +20,14 @@
 
                     <div class="card-body">
                         
+                        <div class="form-group">
+                            <strong>Material Id:</strong>
+                            {{ $materialPerson->material_id }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Person Id:</strong>
+                            {{ $materialPerson->person_id }}
+                        </div>
 
                     </div>
                 </div>

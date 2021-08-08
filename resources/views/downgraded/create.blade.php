@@ -16,7 +16,7 @@
                         <span class="card-title">Create Downgraded</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('downgradeds.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('materials.update', $downgraded->material_id) }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
                             @include('downgraded.form')
