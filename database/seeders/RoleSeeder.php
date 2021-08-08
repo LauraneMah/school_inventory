@@ -1,8 +1,9 @@
 <?php
 
 namespace Database\Seeders;
-
+use Faker\Generator as Faker;
 use Illuminate\Database\Seeder;
+use App\Models\Role;
 
 class RoleSeeder extends Seeder
 {
@@ -13,6 +14,11 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $ROLES = ['normal', 'admin'];
+        foreach ($ROLES as $ROLE) {
+            Role::firstOrCreate([
+                'name' => $ROLE
+            ]);
+        }
     }
 }
