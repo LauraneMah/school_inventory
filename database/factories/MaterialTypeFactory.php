@@ -22,7 +22,7 @@ class MaterialTypeFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->randomElement(['hardware', 'furniture']),
         ];
     }
 }

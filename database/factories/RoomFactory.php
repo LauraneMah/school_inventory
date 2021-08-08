@@ -22,7 +22,8 @@ class RoomFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->word(),
+            'number' => $this->faker->randomDigit(),
         ];
     }
 }

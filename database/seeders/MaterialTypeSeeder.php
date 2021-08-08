@@ -14,7 +14,7 @@ class MaterialTypeSeeder extends Seeder
      */
     public function run()
     {
-        $TYPES = ['informatic', 'furniture'];
+        $TYPES = ['hardware', 'furniture'];
         foreach ($TYPES as $TYPE) {
             MaterialType::firstOrCreate([
                 'name' => $TYPE

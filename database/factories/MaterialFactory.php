@@ -22,7 +22,8 @@ class MaterialFactory extends Factory
     public function definition()
     {
         return [
-
+            'description' => $this->faker->text($maxNbChars = 100) ,
+            'type_id' => $this->faker->randomElement(['1', '2'])
         ];
     }
 }
