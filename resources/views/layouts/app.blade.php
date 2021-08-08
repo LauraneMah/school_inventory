@@ -73,7 +73,36 @@
                     </ul>
                 </div>
             </div>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"  href="rooms" role="button" aria-haspopup="true" aria-expanded="false">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="materials" role="button" aria-haspopup="true" aria-expanded="false">Material</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="people" role="button" aria-haspopup="true" aria-expanded="false">Persons</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="material-rooms" role="button" aria-haspopup="true" aria-expanded="false">Material rooms</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="material-people" role="button" aria-haspopup="true" aria-expanded="false">Material People</a>
+
+                    </li>
+                </ul>
+            </div>
         </nav>
+
 
         <main class="py-4">
             @yield('content')

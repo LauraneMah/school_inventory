@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\MaterialRoom;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class MaterialRoomController
@@ -31,8 +32,11 @@ class MaterialRoomController extends Controller
      */
     public function create()
     {
+        $Fmat = DB::table('materials')->where('type_id', 2)->pluck('description', 'id');
+        $listRooms = DB::table('rooms')->pluck('name', 'id');
+
         $materialRoom = new MaterialRoom();
-        return view('material-room.create', compact('materialRoom'));
+        return view('material-room.create', compact('listRooms','Fmat'));
     }
 
     /**

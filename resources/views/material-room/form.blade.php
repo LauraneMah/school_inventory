@@ -1,15 +1,13 @@
 <div class="box box-info padding-1">
     <div class="box-body">
-        
-        <div class="form-group">
-            {{ Form::label('material_id') }}
-            {{ Form::text('material_id', $materialRoom->material_id, ['class' => 'form-control' . ($errors->has('material_id') ? ' is-invalid' : ''), 'placeholder' => 'Material Id']) }}
-            {!! $errors->first('material_id', '<div class="invalid-feedback">:message</p>') !!}
+
+        <div class="form-group" name="description">
+            {{ Form::label('Choose furniture material : ') }}
+            {{ Form::select('description',$Fmat, null, ['class' => 'form-control', 'placeholder' => 'Material']) }}
         </div>
         <div class="form-group">
-            {{ Form::label('room_id') }}
-            {{ Form::text('room_id', $materialRoom->room_id, ['class' => 'form-control' . ($errors->has('room_id') ? ' is-invalid' : ''), 'placeholder' => 'Room Id']) }}
-            {!! $errors->first('room_id', '<div class="invalid-feedback">:message</p>') !!}
+            {{ Form::label('Choose room : ') }}
+            {{ Form::select('name',$listRooms,null, ['class' => 'form-control', 'placeholder' => 'Name']) }}
         </div>
 
     </div>
