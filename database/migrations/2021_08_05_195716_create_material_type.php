@@ -13,7 +13,7 @@ class CreateMaterialType extends Migration
      */
     public function up()
     {
-        Schema::create('material_type', function (Blueprint $table) {
+        Schema::create('material_types', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateMaterialType extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('material_type');
+        Schema::dropIfExists('material_types');
     }
 }
