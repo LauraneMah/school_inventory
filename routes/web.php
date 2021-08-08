@@ -32,3 +32,7 @@ Route::resource('material_people', \App\Http\Controllers\MaterialPersonControlle
 Route::resource('downgradeds', \App\Http\Controllers\DowngradedController::class);
 
 Route::resource('roles', \App\Http\Controllers\RoleController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
