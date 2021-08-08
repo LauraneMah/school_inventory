@@ -13,7 +13,7 @@ class CreateMaterialRoom extends Migration
      */
     public function up()
     {
-        Schema::create('material_room', function (Blueprint $table) {
+        Schema::create('material_rooms', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateMaterialRoom extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('material_room');
+        Schema::dropIfExists('material_rooms');
     }
 }

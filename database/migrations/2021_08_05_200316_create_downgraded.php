@@ -13,7 +13,7 @@ class CreateDowngraded extends Migration
      */
     public function up()
     {
-        Schema::create('downgraded', function (Blueprint $table) {
+        Schema::create('downgradeds', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateDowngraded extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('downgraded');
+        Schema::dropIfExists('downgradeds');
     }
 }
