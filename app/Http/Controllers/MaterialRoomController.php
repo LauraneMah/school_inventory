@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\MaterialRoom;
+use App\Models\MaterialRoom;
 use Illuminate\Http\Request;
 
 /**
