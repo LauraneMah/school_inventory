@@ -36,6 +36,9 @@
                                     <tr>
                                         <th>No</th>
                                         
+										<th>Stock</th>
+										<th>Motive</th>
+										<th>Material Id</th>
 
                                         <th></th>
                                     </tr>
@@ -45,6 +48,9 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
+											<td>{{ $downgraded->stock }}</td>
+											<td>{{ $downgraded->motive }}</td>
+											<td>{{ $downgraded->material_id }}</td>
 
                                             <td>
                                                 <form action="{{ route('downgradeds.destroy',$downgraded->id) }}" method="POST">

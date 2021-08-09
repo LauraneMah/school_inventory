@@ -36,6 +36,8 @@
                                     <tr>
                                         <th>No</th>
                                         
+										<th>Name</th>
+										<th>Number</th>
 
                                         <th></th>
                                     </tr>
@@ -45,6 +47,8 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
+											<td>{{ $room->name }}</td>
+											<td>{{ $room->number }}</td>
 
                                             <td>
                                                 <form action="{{ route('rooms.destroy',$room->id) }}" method="POST">

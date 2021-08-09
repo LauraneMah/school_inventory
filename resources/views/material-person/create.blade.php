@@ -16,7 +16,7 @@
                         <span class="card-title">Create Material Person</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('material-people.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('material-people.store') }}" role="form" enctype="multipart/form-data">
                             @csrf
 
                             @include('material-person.form')

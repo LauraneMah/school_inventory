@@ -48,7 +48,7 @@ class Material extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function materialPeoples()
+    public function materialPeople()
     {
         return $this->hasMany('App\Models\MaterialPerson', 'material_id', 'id');
     }

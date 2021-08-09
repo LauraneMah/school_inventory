@@ -36,6 +36,7 @@
                                     <tr>
                                         <th>No</th>
                                         
+										<th>Name</th>
 
                                         <th></th>
                                     </tr>
@@ -45,6 +46,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
+											<td>{{ $materialType->name }}</td>
 
                                             <td>
                                                 <form action="{{ route('material-types.destroy',$materialType->id) }}" method="POST">

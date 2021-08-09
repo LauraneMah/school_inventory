@@ -14,8 +14,13 @@ class CreateMaterialRoom extends Migration
     public function up()
     {
         Schema::create('material_rooms', function (Blueprint $table) {
+
             $table->id();
-            $table->timestamps();
+            $table->bigInteger('material_id')->unsigned();
+            $table->bigInteger('room_id')->unsigned();
+            $table->foreign('material_id')->references('id')->on('materials');
+            $table->foreign('room_id')->references('id')->on('rooms');
+
         });
     }
 

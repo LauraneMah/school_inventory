@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\MaterialPerson;
+use App\Models\MaterialPerson;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class MaterialPersonController
@@ -31,8 +32,10 @@ class MaterialPersonController extends Controller
      */
     public function create()
     {
+        $listPeople = DB::table('people')->pluck('name', 'id');
+        $ITmat = DB::table('materials')->where('type_id', 1)->pluck('description', 'id');
         $materialPerson = new MaterialPerson();
-        return view('material-person.create', compact('materialPerson'));
+        return view('material-person.create', compact('listPeople','ITmat'));
     }
 
     /**

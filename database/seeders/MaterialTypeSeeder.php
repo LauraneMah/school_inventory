@@ -1,7 +1,8 @@
 <?php
 
 namespace Database\Seeders;
-
+use App\Models\MaterialType;
+use Faker\Generator as Faker;
 use Illuminate\Database\Seeder;
 
 class MaterialTypeSeeder extends Seeder
@@ -13,6 +14,11 @@ class MaterialTypeSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $TYPES = ['hardware', 'furniture'];
+        foreach ($TYPES as $TYPE) {
+            MaterialType::firstOrCreate([
+                'name' => $TYPE
+            ]);
+        }
     }
 }

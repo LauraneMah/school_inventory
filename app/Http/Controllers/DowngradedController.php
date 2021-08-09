@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Downgraded;
+use App\Models\Downgraded;
 use Illuminate\Http\Request;
 
 /**

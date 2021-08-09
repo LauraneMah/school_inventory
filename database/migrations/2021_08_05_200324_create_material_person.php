@@ -14,8 +14,13 @@ class CreateMaterialPerson extends Migration
     public function up()
     {
         Schema::create('material_people', function (Blueprint $table) {
+
             $table->id();
-            $table->timestamps();
+            $table->bigInteger('material_id')->unsigned();
+            $table->bigInteger('person_id')->unsigned();
+            $table->foreign('material_id')->references('id')->on('materials');
+            $table->foreign('person_id')->references('id')->on('people');
+
         });
     }
 

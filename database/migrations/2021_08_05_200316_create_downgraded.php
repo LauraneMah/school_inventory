@@ -15,7 +15,10 @@ class CreateDowngraded extends Migration
     {
         Schema::create('downgradeds', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->integer('stock');
+            $table->string('motive');
+            $table->bigInteger('material_id')->unsigned();
+            $table->foreign('material_id')->references('id')->on('materials');
         });
     }
 
