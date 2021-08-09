@@ -26,7 +26,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Room Id:</strong>
-                            {{ 'material_id', $materialRoom->room_id }}
+                            {{ $materialRoom->room_id }}
                         </div>
 
                     </div>

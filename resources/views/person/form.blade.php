@@ -1,6 +1,6 @@
 <div class="box box-info padding-1">
     <div class="box-body">
-        
+
         <div class="form-group">
             {{ Form::label('name') }}
             {{ Form::text('name', $person->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Name']) }}
@@ -15,6 +15,11 @@
             {{ Form::label('username') }}
             {{ Form::text('username', $person->username, ['class' => 'form-control' . ($errors->has('username') ? ' is-invalid' : ''), 'placeholder' => 'Username']) }}
             {!! $errors->first('username', '<div class="invalid-feedback">:message</p>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('password') }}
+            {{ Form::text('password', $person->password, ['class' => 'form-control' . ($errors->has('password') ? ' is-invalid' : ''), 'placeholder' => 'Password']) }}
+            {!! $errors->first('password', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('role_id') }}

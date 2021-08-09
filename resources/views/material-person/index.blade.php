@@ -35,7 +35,7 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
+
 										<th>Material Id</th>
 										<th>Person Id</th>
 
@@ -46,9 +46,10 @@
                                     @foreach ($materialPeople as $materialPerson)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
-											<td>{{ $materialPerson->material_id }}</td>
-											<td>{{ $materialPerson->person_id }}</td>
+
+                                            <td>{{ $materialPerson->material->description }}</td>
+                                            <td>{{ $materialPerson->person->name }}</td>
+
 
                                             <td>
                                                 <form action="{{ route('material-people.destroy',$materialPerson->id) }}" method="POST">
