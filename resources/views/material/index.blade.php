@@ -35,7 +35,9 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
+
+										<th>Description</th>
+										<th>Material Type</th>
 
                                         <th></th>
                                     </tr>
@@ -44,15 +46,17 @@
                                     @foreach ($materials as $material)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
+
+											<td>{{ $material->description }}</td>
+											<td>{{ $material->materialType->name }}</td>
 
                                             <td>
                                                 <form action="{{ route('materials.destroy',$material->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('materials.show',$material->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('materials.edit',$material->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-danger btn-sm" href="{{ route('downgradeds.create', $material->id) }}"><i class="fa fa-fw fa-trash"></i> Downgrade</a>
                                                     @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+
                                                 </form>
                                             </td>
                                         </tr>

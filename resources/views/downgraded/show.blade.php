@@ -20,6 +20,18 @@
 
                     <div class="card-body">
                         
+                        <div class="form-group">
+                            <strong>Stock:</strong>
+                            {{ $downgraded->stock }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Motive:</strong>
+                            {{ $downgraded->motive }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Material Id:</strong>
+                            {{ $downgraded->material_id }}
+                        </div>
 
                     </div>
                 </div>

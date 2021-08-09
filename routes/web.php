@@ -23,12 +23,16 @@ Route::resource('rooms', \App\Http\Controllers\RoomController::class);
 
 Route::resource('people', \App\Http\Controllers\PersonController::class);
 
-Route::resource('material_types', \App\Http\Controllers\MaterialTypeController::class);
+Route::resource('material-types', \App\Http\Controllers\MaterialTypeController::class);
 
-Route::resource('material_rooms', \App\Http\Controllers\MaterialRoomController::class);
+Route::resource('material-rooms', \App\Http\Controllers\MaterialRoomController::class);
 
-Route::resource('material_people', \App\Http\Controllers\MaterialPersonController::class);
+Route::resource('material-people', \App\Http\Controllers\MaterialPersonController::class);
 
 Route::resource('downgradeds', \App\Http\Controllers\DowngradedController::class);
 
 Route::resource('roles', \App\Http\Controllers\RoleController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

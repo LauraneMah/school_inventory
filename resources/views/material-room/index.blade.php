@@ -35,7 +35,9 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
+
+										<th>Material Id</th>
+										<th>Room Id</th>
 
                                         <th></th>
                                     </tr>
@@ -44,7 +46,9 @@
                                     @foreach ($materialRooms as $materialRoom)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
+
+                                            <td>{{ $materialRoom->material->description }}</td>
+                                            <td>{{ $materialRoom->room->name }}</td>
 
                                             <td>
                                                 <form action="{{ route('material-rooms.destroy',$materialRoom->id) }}" method="POST">

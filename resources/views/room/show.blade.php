@@ -20,6 +20,14 @@
 
                     <div class="card-body">
                         
+                        <div class="form-group">
+                            <strong>Name:</strong>
+                            {{ $room->name }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Number:</strong>
+                            {{ $room->number }}
+                        </div>
 
                     </div>
                 </div>

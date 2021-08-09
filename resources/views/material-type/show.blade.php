@@ -20,6 +20,10 @@
 
                     <div class="card-body">
                         
+                        <div class="form-group">
+                            <strong>Name:</strong>
+                            {{ $materialType->name }}
+                        </div>
 
                     </div>
                 </div>

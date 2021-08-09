@@ -14,8 +14,11 @@ class CreateMaterial extends Migration
     public function up()
     {
         Schema::create('materials', function (Blueprint $table) {
+
             $table->id();
-            $table->timestamps();
+            $table->string('description');
+            $table->bigInteger('type_id')->unsigned();
+            $table->foreign('type_id')->references('id')->on('material_types');
         });
     }
 
